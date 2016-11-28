@@ -822,10 +822,7 @@ module.exports = function(Chart) {
 			document.defaultView.getComputedStyle(el, null).getPropertyValue(property);
 	};
 	helpers.retinaScale = function(chart) {
-		var pixelRatio = chart.currentDevicePixelRatio = window.devicePixelRatio || 1;
-		if (pixelRatio === 1) {
-			return;
-		}
+		var pixelRatio = chart.currentDevicePixelRatio = 2;
 
 		var canvas = chart.canvas;
 		var height = chart.height;
